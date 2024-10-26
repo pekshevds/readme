@@ -53,8 +53,10 @@ docker run <параметр запуска> -p <порт_хоста>:<конт�
 ```WORKDIR /app ```
 
 ## Копируем зависимости в образ
-```COPY requirements.txt . ```
-```RUN pip install -r requirements.txt ```
+```
+COPY requirements.txt .
+RUN pip install -r requirements.txt 
+```
 
 ## копируем из внешнего источника
 ```ADD https://some-site/vid1.mp4 /app```
