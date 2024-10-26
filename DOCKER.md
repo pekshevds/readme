@@ -76,6 +76,9 @@ RUN pip install -r requirements.txt
 ## Определяем команду для запуска приложения
 ```CMD ["python", "app.py"] ```
 
+## always point host 0.0.0.0 for web-app
+```CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]```
+
 # usefull links
 You may be using [usefull links 1](https://learn.microsoft.com/ru-ru/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile).
 
