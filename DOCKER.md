@@ -83,5 +83,17 @@ RUN pip install -r requirements.txt
 You may be using [usefull links 1](https://learn.microsoft.com/ru-ru/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile).
 
 
+```
+FROM python:3
+WORKDIR /var
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY ./index ./index
+COPY ./server ./server
+COPY manage.py .
+EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+```
+
 
 # .dockerignore
